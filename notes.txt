@@ -1,0 +1,11 @@
+python -m venv .venv
+.venv\Scripts\activate OR source .venv/bin/activate
+
+pip install <packages>
+
+fastapi dev main.py
+
+curl -X POST "http://127.0.0.1" -F "file=@MNIST/2/23.jpg"
+
+curl -X POST "http://127.0.0.1:8000/predict-from-file" \
+     -F "file=@digit.png"
